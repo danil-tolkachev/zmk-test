@@ -4,7 +4,6 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
-
     behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -22,19 +21,19 @@
 
         base {
             bindings = <
-  &kp Q  &kp W  &kp E  &kp R      &kp T                                      &kp Y      &kp U    &kp I      &kp O    &kp P
-  &kp A  &kp S  &kp D  &kp F      &kp G                                      &kp H      &kp J    &kp K      &kp L    &kp SEMICOLON
-  &kp Z  &kp X  &kp C  &kp V      &kp B                                      &kp N      &kp M    &kp COMMA  &kp DOT  &kp SQT
-                       &sk LCTRL  &sk LSHFT  &lt 2 LC(SPACE)    &lt 1 ENTER  &kp SPACE  &kp TAB
+  &kp Q        &kp W       &kp E       &kp R        &kp T                                       &kp Y      &kp U        &kp I       &kp O       &kp P
+  &hm LCTRL A  &hm LALT S  &hm LGUI D  &hm LSHFT F  &kp G                                       &kp H      &hm LSHFT J  &hm LGUI K  &hm LALT L  &hm LCTRL SEMICOLON
+  &kp Z        &kp X       &kp C       &kp V        &kp B                                       &kp N      &kp M        &kp COMMA   &kp DOT     &kp SQT
+                                       &kp DELETE   &kp ESCAPE  &lt 2 BACKSPACE    &lt 1 SPACE  &kp ENTER  &kp TAB
             >;
         };
 
         nav {
             bindings = <
-  &kp F9  &kp F10  &kp F11  &kp F12    &kp LC(GRAVE)                         &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &kp INS
-  &kp F5  &kp F6   &kp F7   &kp F8     &kp ESC                               &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp BACKSPACE
-  &kp F1  &kp F2   &kp F3   &kp F4     &kp DEL                               &none     &none      &none      &none      &kp LC(FSLH)
-                            &kp LCTRL  &kp LSHIFT     &sk LEFT_ALT    &none  &sk LGUI  &none
+  &kp F9        &kp F10      &kp F11      &kp F12       &kp LC(GRAVE)                   &kp HOME  &kp PG_DN       &kp PG_UP    &kp END         &kp INS
+  &hm LCTRL F5  &hm LALT F6  &hm LGUI F7  &hm LSHFT F8  &none                           &kp LEFT  &hm LSHFT DOWN  &hm LGUI UP  &hm LALT RIGHT  &hm LCTRL LCTRL
+  &kp F1        &kp F2       &kp F3       &kp F4        &none                           &none     &none           &none        &none           &kp LC(FSLH)
+                                          &trans        &trans         &trans    &none  &none     &none
             >;
         };
 
