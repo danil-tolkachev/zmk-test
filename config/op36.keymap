@@ -21,10 +21,10 @@
 
         base {
             bindings = <
-  &kp Q        &kp W       &kp E       &kp R        &kp T                                             &kp Y      &kp U        &kp I       &kp O       &kp P
-  &hm LCTRL A  &hm LALT S  &hm LGUI D  &hm LSHFT F  &kp G                                             &kp H      &hm LSHFT J  &hm LGUI K  &hm LALT L  &hm LCTRL SEMICOLON
-  &kp Z        &kp X       &kp C       &kp V        &kp B                                             &kp N      &kp M        &kp COMMA   &kp DOT     &kp SQT
-                                       &kp DELETE   &mt LSHFT ESCAPE  &lt 2 BACKSPACE    &lt 1 SPACE  &kp ENTER  &kp TAB
+  &kp Q        &kp W       &kp E       &kp R         &kp T                                             &kp Y      &kp U        &kp I       &kp O       &kp P
+  &hm LCTRL A  &hm LALT S  &hm LGUI D  &hm LSHFT F   &kp G                                             &kp H      &hm LSHFT J  &hm LGUI K  &hm LALT L  &hm LCTRL SEMICOLON
+  &kp Z        &kp X       &kp C       &kp V         &kp B                                             &kp N      &kp M        &kp COMMA   &kp DOT     &kp SQT
+                                       &lt 4 DELETE  &mt LSHFT ESCAPE  &lt 2 BACKSPACE    &lt 1 SPACE  &kp ENTER  &kp TAB
             >;
         };
 
@@ -39,10 +39,10 @@
 
         sym {
             bindings = <
-  &kp N1    &kp N2     &kp N3     &kp N4     &kp N5                     &kp N6    &kp N7    &kp N8    &kp N9    &kp N0
-  &kp PLUS  &kp MINUS  &kp DOT    &kp COMMA  &kp EXCL                   &kp LBKT  &kp LPAR  &kp RPAR  &kp RBKT  &kp DQT
-  &kp FSLH  &kp STAR   &kp COLON  &kp SEMI   &kp QMARK                  &kp LBRC  &kp LT    &kp GT    &kp RBRC  &kp GRAVE
-                                  &none      &kp LSHFT  &none    &mo 3  &kp BSLH  &none
+  &kp EXCL  &kp AT_SIGN  &kp HASH   &kp DLLR   &kp PRCNT                  &kp CARET  &kp AMPS  &none     &none     &kp QMARK
+  &kp PLUS  &kp MINUS    &kp DOT    &kp COMMA  &kp EQUAL                  &kp LBKT   &kp LPAR  &kp RPAR  &kp RBKT  &kp DQT
+  &kp FSLH  &kp STAR     &kp COLON  &kp SEMI   &none                      &kp LBRC   &kp LT    &kp GT    &kp RBRC  &kp GRAVE
+                                    &none      &none      &none    &mo 3  &none      &none
             >;
         };
 
@@ -52,6 +52,15 @@
   &bt BT_CLR    &out OUT_BLE  &out OUT_USB  &trans        &trans                          &trans  &kp C_VOL_DN  &kp C_VOL_UP  &kp K_MUTE        &trans
   &trans        &trans        &trans        &trans        &trans                          &trans  &kp K_PREV    &kp K_NEXT    &kp K_PLAY_PAUSE  &trans
                                             &trans        &trans        &trans    &trans  &trans  &trans
+            >;
+        };
+
+        nums {
+            bindings = <
+  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0
+  &kp N0  &kp N9  &kp N8  &kp N7  &kp N6                    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+                          &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
