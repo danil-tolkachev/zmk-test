@@ -43,19 +43,28 @@
 
         base {
             bindings = <
-  &kp Q         &kp W        &kp E        &kp R         &kp T                                             &kp Y      &kp U         &kp I        &kp O        &kp P
-  &hml LCTRL A  &hml LALT S  &hml LGUI D  &hml LSHFT F  &kp G                                             &kp H      &hmr LSHFT J  &hmr LGUI K  &hmr LALT L  &hmr LCTRL SEMICOLON
-  &kp Z         &kp X        &kp C        &kp V         &kp B                                             &kp N      &kp M         &kp COMMA    &kp DOT      &kp SQT
-                                          &lt 3 DELETE  &mt LSHFT ESCAPE  &lt 2 BACKSPACE    &lt 1 SPACE  &kp ENTER  &kp TAB
+  &kp Q         &kp W        &kp E        &kp R         &kp T                                          &kp Y      &kp U         &kp I        &kp O        &kp P
+  &hml LCTRL A  &hml LALT S  &hml LGUI D  &hml LSHFT F  &kp G                                          &kp H      &hmr LSHFT J  &hmr LGUI K  &hmr LALT L  &hmr LCTRL SEMICOLON
+  &kp Z         &kp X        &kp C        &kp V         &kp B                                          &kp N      &kp M         &kp COMMA    &kp DOT      &kp SQT
+                                          &kp DEL       &mt LSHFT BACKSPACE  &lt 3 ESC    &lt 1 ENTER  &kp SPACE  &kp TAB
             >;
         };
 
         nav {
             bindings = <
-  &kp F9         &kp F10       &kp F11       &kp F12        &kp LC(GRAVE)                   &kp HOME  &kp PG_DN        &kp PG_UP     &kp END          &kp INS
-  &hml LCTRL F5  &hml LALT F6  &hml LGUI F7  &hml LSHFT F8  &none                           &kp LEFT  &hmr LSHFT DOWN  &hmr LGUI UP  &hmr LALT RIGHT  &hmr LCTRL LCTRL
-  &kp F1         &kp F2        &kp F3        &kp F4         &none                           &none     &none            &none         &none            &kp LG(FSLH)
-                                             &trans         &trans         &trans    &none  &none     &none
+  &kp LG(Q)         &kp LG(W)        &none            &none             &kp LC(GRAVE)                     &kp HOME  &kp PG_DN        &kp PG_UP     &kp END          &kp INS
+  &hml LCTRL LG(A)  &hml LALT LG(S)  &hml LGUI LG(D)  &hml LSHFT LG(F)  &none                             &kp LEFT  &hmr LSHFT DOWN  &hmr LGUI UP  &hmr LALT RIGHT  &hmr LCTRL LCTRL
+  &kp LG(Z)         &kp LG(X)        &kp LG(C)        &kp LG(V)         &none                             &none     &none            &none         &none            &kp LG(FSLH)
+                                                      &trans            &lt 2 BACKSPACE  &trans    &none  &none     &none
+            >;
+        };
+
+        fn {
+            bindings = <
+  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5                    &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
+  &kp F11  &kp F12  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+  &trans   &trans   &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+                            &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
@@ -64,7 +73,7 @@
   &kp GRAVE  &kp AT_SIGN  &kp HASH   &kp DLLR   &kp PRCNT                        &kp CARET    &kp AMPS  &none     &kp EXCL  &kp QMARK
   &kp PLUS   &kp MINUS    &kp DOT    &kp COMMA  &kp EQUAL                        &kp LBKT     &kp LPAR  &kp RPAR  &kp RBKT  &kp DQT
   &kp TILDE  &kp STAR     &kp COLON  &kp SEMI   &kp UNDER                        &kp LBRC     &kp LT    &kp GT    &kp RBRC  &kp FSLH
-                                     &none      &none      &none    &lt 4 SPACE  &lt 3 ENTER  &kp TAB
+                                     &none      &none      &none    &lt 5 SPACE  &lt 4 ENTER  &kp TAB
             >;
         };
 
