@@ -52,10 +52,10 @@
 
         nav {
             bindings = <
-  &kp LG(Q)         &kp LG(W)        &none            &none             &kp LC(GRAVE)                        &kp HOME  &kp PG_DN        &kp PG_UP     &kp END          &kp INS
-  &hml LCTRL LG(A)  &hml LALT LG(S)  &hml LGUI LG(D)  &hml LSHFT LG(F)  &none                                &kp LEFT  &hmr LSHFT DOWN  &hmr LGUI UP  &hmr LALT RIGHT  &hmr LCTRL LCTRL
-  &kp LG(Z)         &kp LG(X)        &kp LG(C)        &kp LG(V)         &none                                &none     &none            &none         &none            &kp LG(FSLH)
-                                                      &trans            &lt 2 BACKSPACE  &lt 5 ESC    &none  &none     &none
+  &kp LG(Q)         &kp LG(W)        &none            &none             &kp LC(GRAVE)                        &kp HOME      &kp PG_DN        &kp PG_UP     &kp END          &kp INS
+  &hml LCTRL LG(A)  &hml LALT LG(S)  &hml LGUI LG(D)  &hml LSHFT LG(F)  &none                                &kp LEFT      &hmr LSHFT DOWN  &hmr LGUI UP  &hmr LALT RIGHT  &hmr LCTRL LA(BACKSPACE)
+  &kp LG(Z)         &kp LG(X)        &kp LG(C)        &kp LG(V)         &none                                &kp LA(LEFT)  &none            &none         &kp LA(RIGHT)    &kp LG(FSLH)
+                                                      &trans            &lt 2 BACKSPACE  &lt 5 ESC    &none  &none         &none
             >;
         };
 
