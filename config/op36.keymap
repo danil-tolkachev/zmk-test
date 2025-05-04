@@ -70,10 +70,10 @@
 
         sym {
             bindings = <
-  &kp GRAVE  &kp AT_SIGN  &kp HASH  &kp DLLR   &kp PRCNT                        &kp LBRC     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp RBRC   &kp DQT
-  &kp PLUS   &kp MINUS    &kp DOT   &kp COMMA  &kp EQUAL                        &kp EXCL     &kp LPAR          &kp RPAR           &kp COLON  &kp SEMICOLON
-  &kp TILDE  &kp STAR     &kp PIPE  &kp AMPS   &kp UNDER                        &kp QMARK    &kp CARET         &kp LESS_THAN      &kp GT     &kp FSLH
-                                    &none      &none      &none    &lt 5 SPACE  &lt 4 ENTER  &kp TAB
+  &kp GRAVE  &kp AT_SIGN  &kp HASH  &kp DLLR   &kp PRCNT                        &kp LBKT     &kp LBRC   &kp RBRC       &kp RBKT   &kp DQT
+  &kp PLUS   &kp MINUS    &kp DOT   &kp COMMA  &kp EQUAL                        &kp EXCL     &kp LPAR   &kp RPAR       &kp COLON  &kp SEMICOLON
+  &kp TILDE  &kp STAR     &kp PIPE  &kp AMPS   &kp UNDER                        &kp QMARK    &kp CARET  &kp LESS_THAN  &kp GT     &kp FSLH
+                                    &none      &none      &none    &lt 5 ENTER  &lt 4 SPACE  &kp TAB
             >;
         };
 
