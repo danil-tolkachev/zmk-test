@@ -43,28 +43,28 @@
 
         base {
             bindings = <
-  &kp Q         &kp W        &kp E        &kp R         &kp T                                          &kp Y             &kp U         &kp I        &kp O        &kp P
-  &hml LCTRL A  &hml LALT S  &hml LGUI D  &hml LSHFT F  &kp G                                          &kp H             &hmr LSHFT J  &hmr LGUI K  &hmr LALT L  &hmr LCTRL SEMICOLON
-  &kp Z         &kp X        &kp C        &kp V         &kp B                                          &kp N             &kp M         &kp COMMA    &kp DOT      &kp SQT
-                                          &kp DEL       &mt LSHFT ESC  &lt 3 BACKSPACE    &lt 1 ENTER  &mt LSHIFT SPACE  &kp TAB
+  &kp Q         &kp W        &kp E        &kp R         &kp T                                      &kp Y        &kp U         &kp I        &kp O        &kp P
+  &hml LCTRL A  &hml LALT S  &hml LGUI D  &hml LSHFT F  &kp G                                      &kp H        &hmr LSHFT J  &hmr LGUI K  &hmr LALT L  &hmr LCTRL SEMICOLON
+  &kp Z         &kp X        &kp C        &kp V         &kp B                                      &kp N        &kp M         &kp COMMA    &kp DOT      &kp SQT
+                                          &kp DEL       &lt 4 ESC  &lt 3 BACKSPACE    &lt 1 ENTER  &lt 2 SPACE  &kp TAB
             >;
         };
 
         nav {
             bindings = <
-  &kp LG(Q)         &kp LG(W)        &none            &none             &kp LC(GRAVE)                            &kp HOME      &kp PG_DN        &kp PG_UP     &kp END          &kp INS
-  &hml LCTRL LG(A)  &hml LALT LG(S)  &hml LGUI LG(D)  &hml LSHFT LG(F)  &none                                    &kp LEFT      &hmr LSHFT DOWN  &hmr LGUI UP  &hmr LALT RIGHT  &hmr LCTRL LA(BACKSPACE)
-  &kp LG(Z)         &kp LG(X)        &kp LG(C)        &kp LG(V)         &none                                    &kp LA(LEFT)  &none            &none         &kp LA(RIGHT)    &kp LG(FSLH)
-                                                      &trans            &lt 2 ESCAPE   &lt 5 BACKSPACE    &none  &none         &none
+  &kp LG(Q)         &kp LG(W)        &none            &none           &kp LC(GRAVE)                            &kp HOME      &kp PG_DN        &kp PG_UP     &kp END          &kp INS
+  &hml LCTRL LG(A)  &hml LALT LG(S)  &hml LGUI LG(D)  &hml LSHFT DQT  &kp PRCNT                                &kp LEFT      &hmr LSHFT DOWN  &hmr LGUI UP  &hmr LALT RIGHT  &hmr LCTRL LA(BACKSPACE)
+  &kp LG(Z)         &kp LG(X)        &kp LG(C)        &kp LG(V)       &kp LC(B)                                &kp LA(LEFT)  &none            &none         &kp LA(RIGHT)    &kp LG(FSLH)
+                                                      &trans          &lt 2 ESCAPE   &lt 5 BACKSPACE    &none  &none         &none
             >;
         };
 
         fn {
             bindings = <
-  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5                    &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-  &kp F11  &kp F12  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-  &trans   &trans   &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-                            &trans  &trans  &trans    &trans  &trans  &trans
+  &kp F1     &kp F2    &kp F3    &kp F4     &kp F5                     &kp F6   &kp F7     &kp F8  &kp F9  &kp F10
+  &sk LCTRL  &sk LALT  &sk LGUI  &sk LSHFT  &kp F11                    &kp F12  &sk RSHFT  &trans  &trans  &trans
+  &trans     &trans    &trans    &trans     &trans                     &trans   &trans     &trans  &trans  &trans
+                                 &trans     &trans   &trans    &trans  &trans   &trans
             >;
         };
 
@@ -72,8 +72,8 @@
             bindings = <
   &kp GRAVE  &kp AT_SIGN  &kp HASH  &kp DLLR   &kp PRCNT                        &kp LBRC     &kp LBKT   &kp RBKT       &kp RBRC   &kp DQT
   &kp PLUS   &kp MINUS    &kp DOT   &kp COMMA  &kp EQUAL                        &kp EXCL     &kp LPAR   &kp RPAR       &kp COLON  &kp SEMICOLON
-  &kp TILDE  &kp STAR     &kp PIPE  &kp AMPS   &kp UNDER                        &kp QMARK    &kp CARET  &kp LESS_THAN  &kp GT     &kp FSLH
-                                    &none      &none      &none    &lt 5 ENTER  &lt 4 SPACE  &kp BSLH
+  &kp TILDE  &kp STAR     &kp PIPE  &kp AMPS   &kp BSLH                         &kp QMARK    &kp CARET  &kp LESS_THAN  &kp GT     &kp FSLH
+                                    &none      &none      &none    &lt 5 ENTER  &lt 4 SPACE  &kp UNDER
             >;
         };
 
@@ -81,14 +81,14 @@
             bindings = <
   &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0
   &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &kp BSLH
                           &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
         adj {
             bindings = <
-  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans  &trans        &trans        &trans            &trans
+  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans  &kp C_BRI_UP  &kp C_BRI_DN  &trans            &trans
   &bt BT_CLR    &out OUT_BLE  &out OUT_USB  &trans        &trans                          &trans  &kp C_VOL_DN  &kp C_VOL_UP  &kp K_MUTE        &trans
   &trans        &trans        &trans        &trans        &trans                          &trans  &kp K_PREV    &kp K_NEXT    &kp K_PLAY_PAUSE  &trans
                                             &trans        &trans        &trans    &trans  &trans  &trans
