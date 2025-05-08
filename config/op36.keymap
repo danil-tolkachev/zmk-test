@@ -38,6 +38,25 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        kha {
+            bindings = <&kp LBKT>;
+            key-positions = <6 7>;
+        };
+
+        hrdsgn {
+            bindings = <&kp RBKT>;
+            key-positions = <7 8>;
+        };
+
+        tglen {
+            bindings = <&kp LC(SPACE)>;
+            key-positions = <22 23>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -88,7 +107,7 @@
 
         adj {
             bindings = <
-  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans  &kp C_BRI_UP  &kp C_BRI_DN  &trans            &trans
+  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans  &kp C_BRI_DN  &kp C_BRI_UP  &trans            &trans
   &bt BT_CLR    &out OUT_BLE  &out OUT_USB  &trans        &trans                          &trans  &kp C_VOL_DN  &kp C_VOL_UP  &kp K_MUTE        &trans
   &trans        &trans        &trans        &trans        &trans                          &trans  &kp K_PREV    &kp K_NEXT    &kp K_PLAY_PAUSE  &trans
                                             &trans        &trans        &trans    &trans  &trans  &trans
