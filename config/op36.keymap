@@ -62,28 +62,28 @@
 
         base {
             bindings = <
-  &kp Q         &kp W        &kp E        &kp R         &kp T                                      &kp Y        &kp U         &kp I        &kp O        &kp P
-  &hml LCTRL A  &hml LALT S  &hml LGUI D  &hml LSHFT F  &kp G                                      &kp H        &hmr LSHFT J  &hmr LGUI K  &hmr LALT L  &hmr LCTRL SEMICOLON
-  &kp Z         &kp X        &kp C        &kp V         &kp B                                      &kp N        &kp M         &kp COMMA    &kp DOT      &kp SQT
-                                          &kp DEL       &lt 4 ESC  &lt 3 BACKSPACE    &lt 1 ENTER  &lt 2 SPACE  &kp TAB
+  &kp Q         &kp W        &kp E         &kp R        &kp T                                      &kp Y        &kp U        &kp I         &kp O        &kp P
+  &hml LCTRL A  &hml LALT S  &hml LSHFT D  &hml LGUI F  &kp G                                      &kp H        &hmr RGUI J  &hmr RSHFT K  &hmr LALT L  &hmr LCTRL SEMICOLON
+  &kp Z         &kp X        &kp C         &kp V        &kp B                                      &kp N        &kp M        &kp COMMA     &kp DOT      &kp SQT
+                                           &kp DEL      &lt 4 ESC  &lt 3 BACKSPACE    &lt 1 ENTER  &lt 2 SPACE  &kp TAB
             >;
         };
 
         nav {
             bindings = <
-  &kp LG(Q)         &kp LG(W)        &kp LG(LBKT)     &kp LG(RBKT)    &kp LC(GRAVE)                            &kp HOME      &kp PG_DN        &kp PG_UP     &kp END          &kp INS
-  &hml LCTRL LG(A)  &hml LALT LG(S)  &hml LGUI LG(D)  &hml LSHFT DQT  &kp PRCNT                                &kp LEFT      &hmr LSHFT DOWN  &hmr LGUI UP  &hmr LALT RIGHT  &hmr LCTRL LA(BACKSPACE)
-  &kp LG(Z)         &kp LG(X)        &kp LG(C)        &kp LG(V)       &kp LC(B)                                &kp LA(LEFT)  &none            &none         &kp LA(RIGHT)    &kp LG(FSLH)
-                                                      &trans          &lt 2 ESCAPE   &lt 5 BACKSPACE    &none  &none         &none
+  &kp LG(Q)         &kp LG(W)        &kp LG(LBKT)      &kp LG(RBKT)   &kp LC(GRAVE)                            &kp LG(LEFT)  &kp PG_DN       &kp PG_UP      &kp LG(RIGHT)    &kp INS
+  &hml LCTRL LG(A)  &hml LALT LG(S)  &hml LSHFT LG(D)  &hml LGUI DQT  &kp PRCNT                                &kp LEFT      &hmr RGUI DOWN  &hmr RSHFT UP  &hmr LALT RIGHT  &hmr LCTRL LA(BACKSPACE)
+  &kp LG(Z)         &kp LG(X)        &kp LG(C)         &kp LG(V)      &kp LC(B)                                &kp LA(LEFT)  &none           &none          &kp LA(RIGHT)    &kp LG(FSLH)
+                                                       &trans         &lt 2 ESCAPE   &lt 5 BACKSPACE    &none  &none         &none
             >;
         };
 
         fn {
             bindings = <
-  &kp F1     &kp F2    &kp F3    &kp F4     &kp F5                     &kp F6   &kp F7     &kp F8    &kp F9    &kp F10
-  &sk LCTRL  &sk LALT  &sk LGUI  &sk LSHFT  &kp F11                    &kp F12  &sk RSHFT  &sk RGUI  &sk LALT  &sk RCTRL
-  &trans     &trans    &trans    &trans     &trans                     &trans   &trans     &trans    &trans    &trans
-                                 &trans     &trans   &trans    &trans  &trans   &trans
+  &kp F1     &kp F2    &kp F3     &kp F4    &kp F5                     &kp F6   &kp F7    &kp F8     &kp F9    &kp F10
+  &sk LCTRL  &sk LALT  &sk LSHFT  &sk LGUI  &kp F11                    &kp F12  &sk RGUI  &sk RSHFT  &sk LALT  &sk RCTRL
+  &trans     &trans    &trans     &trans    &trans                     &trans   &trans    &trans     &trans    &trans
+                                  &trans    &trans   &trans    &trans  &trans   &trans
             >;
         };
 
@@ -98,10 +98,10 @@
 
         nums {
             bindings = <
-  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0
-  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &kp BSLH
-                          &trans  &trans  &trans    &trans  &trans  &trans
+  &kp N1     &kp N2     &kp N3    &kp N4     &kp N5                     &kp N6     &kp N7     &kp N8         &kp N9     &kp N0
+  &kp PLUS   &kp MINUS  &kp DOT   &kp COMMA  &kp EQUAL                  &kp EXCL   &kp LPAR   &kp RPAR       &kp COLON  &kp SEMICOLON
+  &kp TILDE  &kp STAR   &kp PIPE  &kp AMPS   &kp BSLH                   &kp QMARK  &kp CARET  &kp LESS_THAN  &kp GT     &kp FSLH
+                                  &none      &none      &none    &none  &none      &kp UNDER
             >;
         };
 
