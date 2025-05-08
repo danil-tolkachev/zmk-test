@@ -52,7 +52,7 @@
 
         nav {
             bindings = <
-  &kp LG(Q)         &kp LG(W)        &none            &none           &kp LC(GRAVE)                            &kp HOME      &kp PG_DN        &kp PG_UP     &kp END          &kp INS
+  &kp LG(Q)         &kp LG(W)        &kp LG(LBKT)     &kp LG(RBKT)    &kp LC(GRAVE)                            &kp HOME      &kp PG_DN        &kp PG_UP     &kp END          &kp INS
   &hml LCTRL LG(A)  &hml LALT LG(S)  &hml LGUI LG(D)  &hml LSHFT DQT  &kp PRCNT                                &kp LEFT      &hmr LSHFT DOWN  &hmr LGUI UP  &hmr LALT RIGHT  &hmr LCTRL LA(BACKSPACE)
   &kp LG(Z)         &kp LG(X)        &kp LG(C)        &kp LG(V)       &kp LC(B)                                &kp LA(LEFT)  &none            &none         &kp LA(RIGHT)    &kp LG(FSLH)
                                                       &trans          &lt 2 ESCAPE   &lt 5 BACKSPACE    &none  &none         &none
@@ -61,9 +61,9 @@
 
         fn {
             bindings = <
-  &kp F1     &kp F2    &kp F3    &kp F4     &kp F5                     &kp F6   &kp F7     &kp F8  &kp F9  &kp F10
-  &sk LCTRL  &sk LALT  &sk LGUI  &sk LSHFT  &kp F11                    &kp F12  &sk RSHFT  &trans  &trans  &trans
-  &trans     &trans    &trans    &trans     &trans                     &trans   &trans     &trans  &trans  &trans
+  &kp F1     &kp F2    &kp F3    &kp F4     &kp F5                     &kp F6   &kp F7     &kp F8    &kp F9    &kp F10
+  &sk LCTRL  &sk LALT  &sk LGUI  &sk LSHFT  &kp F11                    &kp F12  &sk RSHFT  &sk RGUI  &sk LALT  &sk RCTRL
+  &trans     &trans    &trans    &trans     &trans                     &trans   &trans     &trans    &trans    &trans
                                  &trans     &trans   &trans    &trans  &trans   &trans
             >;
         };
