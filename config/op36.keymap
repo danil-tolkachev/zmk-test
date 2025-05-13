@@ -45,21 +45,25 @@
         kha {
             bindings = <&kp LBKT>;
             key-positions = <6 16>;
+            layers = <0>;
         };
 
         hrdsgn {
             bindings = <&kp RBKT>;
             key-positions = <7 17>;
+            layers = <0>;
         };
 
         en {
             bindings = <&kp CAPSLOCK>;
-            key-positions = <22 23>;
+            key-positions = <2 12>;
+            layers = <0>;
         };
 
         ru {
             bindings = <&kp LS(CAPS)>;
-            key-positions = <2 3>;
+            key-positions = <3 13>;
+            layers = <0>;
         };
     };
 
