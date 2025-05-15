@@ -60,42 +60,81 @@
         kha {
             bindings = <&kp LBKT>;
             key-positions = <6 16>;
-            layers = <0>;
+            layers = <1>;
         };
 
         hrdsgn {
             bindings = <&kp RBKT>;
             key-positions = <7 17>;
-            layers = <0>;
+            layers = <1>;
         };
 
         en {
-            bindings = <&kp CAPSLOCK>;
+            bindings = <&layer_ru>;
             key-positions = <2 12>;
-            layers = <0>;
+            layers = <0 1>;
         };
 
         ru {
-            bindings = <&kp LS(CAPS)>;
+            bindings = <&layer_en>;
             key-positions = <3 13>;
-            layers = <0>;
+            layers = <0 1>;
         };
 
         num {
-            bindings = <&mo 4>;
+            bindings = <&mo 6>;
             key-positions = <31 32>;
+        };
+    };
+
+    macros {
+        ru: ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(CAPS)>;
+            label = "RU";
+        };
+
+        en: en {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CAPS>;
+            label = "EN";
+        };
+
+        layer_en: layer_en {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog 0 &en>;
+            label = "LAYER_EN";
+        };
+
+        layer_ru: layer_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog 1 &ru>;
+            label = "LAYER_RU";
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        base {
+        base_en {
             bindings = <
   &kp Q        &kp W        &kp E         &kp R          &kp T                                          &kp Y        &kp U         &kp I         &kp O        &kp P
   &hml LGUI A  &hml LALT S  &hml LSHFT D  &hml LCTRL F   &kp G                                          &kp H        &hmr RCTRL J  &hmr RSHFT K  &hmr LALT L  &hmr LGUI SEMICOLON
   &kp Z        &kp X        &kp C         &kp V          &kp B                                          &kp N        &kp M         &kp COMMA     &kp DOT      &kp SQT
-                                          &mt LCTRL DEL  &mt LSHFT ESC  &lt 3 BACKSPACE    &lt 1 ENTER  &lt 2 SPACE  &lt 6 TAB
+                                          &mt LCTRL DEL  &mt LSHFT ESC  &lt 4 BACKSPACE    &lt 2 ENTER  &lt 3 SPACE  &lt 8 TAB
+            >;
+        };
+
+        base_ru {
+            bindings = <
+  &kp RU_CYRILLIC_SHORT_I   &kp RU_CYRILLIC_TSE         &kp RU_CYRILLIC_U          &kp RU_CYRILLIC_KA        &kp RU_CYRILLIC_IE                                  &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA        &kp RU_CYRILLIC_SHCHA     &kp RU_CYRILLIC_ZE
+  &hml LGUI RU_CYRILLIC_EF  &hml LALT RU_CYRILLIC_YERU  &hml LSHFT RU_CYRILLIC_VE  &hml LCTRL RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                                  &kp RU_CYRILLIC_ER  &hmr RCTRL RU_CYRILLIC_O   &hmr RSHFT RU_CYRILLIC_EL  &hmr LALT RU_CYRILLIC_DE  &hmr LGUI RU_CYRILLIC_ZHE
+  &kp RU_CYRILLIC_YA        &kp RU_CYRILLIC_CHE         &kp RU_CYRILLIC_ES         &kp RU_CYRILLIC_EM        &kp RU_CYRILLIC_I                                   &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE         &kp RU_CYRILLIC_YU        &kp RU_CYRILLIC_E
+                                                                                   &mt LCTRL DEL             &mt LSHFT ESC       &lt 5 BACKSPACE    &lt 2 ENTER  &lt 3 SPACE         &lt 8 TAB
             >;
         };
 
@@ -104,7 +143,7 @@
   &kp LC(Q)  &kp LC(W)  &kp LC(LBKT)  &kp LC(RBKT)  &kp LC(GRAVE)                            &kp HOME      &kp PG_DN        &kp PG_UP      &kp END          &kp INS
   &kp LGUI   &kp LALT   &kp LSHFT     &kp LCTRL     &kp PRCNT                                &kp LEFT      &hmr RCTRL DOWN  &hmr RSHFT UP  &hmr LALT RIGHT  &hmr RGUI LC(BACKSPACE)
   &kp LC(Z)  &kp LC(X)  &kp LC(C)     &kp LC(V)     &kp LC(B)                                &kp LC(LEFT)  &none            &none          &kp LC(RIGHT)    &kp LC(FSLH)
-                                      &trans        &lt 2 ESCAPE   &lt 5 BACKSPACE    &none  &none         &none
+                                      &trans        &lt 3 ESCAPE   &lt 7 BACKSPACE    &none  &none         &none
             >;
         };
 
@@ -117,12 +156,21 @@
             >;
         };
 
-        sym {
+        sym_en {
             bindings = <
   &kp GRAVE  &kp AT_SIGN  &kp HASH  &kp DLLR   &kp PRCNT                        &kp LBRC     &kp LBKT   &kp RBKT       &kp RBRC   &kp DQT
   &kp PLUS   &kp MINUS    &kp DOT   &kp COMMA  &kp EQUAL                        &kp EXCL     &kp LPAR   &kp RPAR       &kp COLON  &kp SEMICOLON
   &kp TILDE  &kp STAR     &kp PIPE  &kp AMPS   &kp BSLH                         &kp QMARK    &kp CARET  &kp LESS_THAN  &kp GT     &kp FSLH
-                                    &none      &mo 4      &none    &lt 5 ENTER  &lt 4 SPACE  &kp UNDER
+                                    &none      &mo 6      &none    &lt 7 ENTER  &lt 6 SPACE  &kp UNDER
+            >;
+        };
+
+        sym_ru {
+            bindings = <
+  &kp GRAVE  &kp AT_SIGN  &kp HASH    &kp DLLR      &kp PRCNT                        &kp LBRC      &kp LBKT   &kp RBKT       &kp RBRC      &kp RU_DQT
+  &kp PLUS   &kp MINUS    &kp RU_DOT  &kp RU_COMMA  &kp EQUAL                        &kp EXCL      &kp LPAR   &kp RPAR       &kp RU_COLON  &kp RU_SEMI
+  &kp TILDE  &kp STAR     &kp PIPE    &kp AMPS      &kp BSLH                         &kp RU_QMARK  &kp CARET  &kp LESS_THAN  &kp GT        &kp FSLH
+                                      &none         &mo 6      &none    &lt 7 ENTER  &lt 6 SPACE   &kp UNDER
             >;
         };
 
