@@ -89,14 +89,14 @@
     };
 
     macros {
-        ru: ru {
+        to_ru: ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(CAPS)>;
             label = "RU";
         };
 
-        en: en {
+        to_en: en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp CAPS>;
@@ -106,24 +106,24 @@
         layer_en: layer_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 0 &en>;
+            bindings = <&to 0 &to_en>;
             label = "LAYER_EN";
         };
 
         layer_ru: layer_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 1 &ru>;
+            bindings = <&to 1 &to_ru>;
             label = "LAYER_RU";
         };
 
-        en_sym: en_sym {
+        en: en_sym {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&en &macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&to_en &macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_wait_time 10>,
-                <&ru>,
+                <&to_ru>,
                 <&macro_wait_time 10>;
 
             label = "EN_SYM";
@@ -180,10 +180,10 @@
 
         sym_ru {
             bindings = <
-  &en_sym GRAVE  &en_sym AT_SIGN  &en_sym HASH  &en_sym DLLR  &kp PRCNT                        &en_sym LBRC  &en_sym LBKT   &en_sym RBKT       &en_sym RBRC  &kp RU_DQT
-  &kp PLUS       &kp MINUS        &kp RU_DOT    &kp RU_COMMA  &kp EQUAL                        &kp EXCL      &kp LPAR       &kp RPAR           &kp RU_COLON  &kp RU_SEMI
-  &en_sym TILDE  &kp STAR         &kp PIPE      &en_sym AMPS  &kp BSLH                         &kp RU_QMARK  &en_sym CARET  &en_sym LESS_THAN  &en_sym GT    &kp RU_FSLH
-                                                &none         &mo 6      &none    &lt 7 ENTER  &lt 6 SPACE   &kp UNDER
+  &en GRAVE  &en AT_SIGN  &en HASH    &en DLLR      &kp PRCNT                               &en LBRC      &en LBKT   &en RBKT       &en RBRC      &kp RU_DQT
+  &kp PLUS   &kp MINUS    &kp RU_DOT  &kp RU_COMMA  &kp EQUAL                               &kp EXCL      &kp LPAR   &kp RPAR       &kp RU_COLON  &kp RU_SEMI
+  &en TILDE  &kp STAR     &en PIPE    &en AMPS      &kp RU_BACKSLASH                        &kp RU_QMARK  &en CARET  &en LESS_THAN  &en GT        &kp RU_FSLH
+                                      &none         &mo 6             &none    &lt 7 ENTER  &lt 6 SPACE   &kp UNDER
             >;
         };
 
