@@ -37,21 +37,6 @@
             hold-trigger-key-positions = < 5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35 >;
             hold-trigger-on-release;
         };
-
-        ruen_key: ruen_key {
-            compatible = "zmk,behavior-ruen-key";
-            #binding-cells = <2>;
-        };
-
-        ruen_macos: ruen_macos {
-            compatible = "zmk,behavior-ruen-macos";
-            #binding-cells = <1>;
-        };
-
-        ruen_switch: ruen_switch {
-            compatible = "zmk,behavior-ruen-switch";
-            #binding-cells = <2>;
-        };
     };
 
     combos {
@@ -89,18 +74,18 @@
     };
 
     macros {
-        to_ru: ru {
+        to_ru: to_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(CAPS)>;
-            label = "RU";
+            label = "TO_RU";
         };
 
-        to_en: en {
+        to_en: to_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp CAPS>;
-            label = "EN";
+            label = "TO_EN";
         };
 
         layer_en: layer_en {
@@ -117,7 +102,7 @@
             label = "LAYER_RU";
         };
 
-        en: en_sym {
+        en: en {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -126,7 +111,7 @@
                 <&to_ru>,
                 <&macro_wait_time 10>;
 
-            label = "EN_SYM";
+            label = "EN";
         };
     };
 
@@ -137,7 +122,7 @@
             bindings = <
   &kp Q        &kp W        &kp E         &kp R          &kp T                                          &kp Y        &kp U         &kp I         &kp O        &kp P
   &hml LGUI A  &hml LALT S  &hml LSHFT D  &hml LCTRL F   &kp G                                          &kp H        &hmr RCTRL J  &hmr RSHFT K  &hmr LALT L  &hmr LGUI SEMICOLON
-  &kp Z        &kp X        &kp C         &kp V          &kp B                                          &kp N        &kp M         &kp COMMA     &kp DOT      &kp SQT
+  &kp Z        &kp X        &kp C         &kp V          &kp B                                          &kp N        &kp M         &none         &none        &kp SQT
                                           &mt LCTRL DEL  &mt LSHFT ESC  &lt 4 BACKSPACE    &lt 2 ENTER  &lt 3 SPACE  &lt 8 TAB
             >;
         };
@@ -153,19 +138,19 @@
 
         nav {
             bindings = <
-  &kp LC(Q)  &kp LC(W)  &kp LC(LBKT)  &kp LC(RBKT)  &kp LC(GRAVE)                            &kp HOME      &kp PG_DN        &kp PG_UP      &kp END          &kp INS
-  &kp LGUI   &kp LALT   &kp LSHFT     &kp LCTRL     &kp PRCNT                                &kp LEFT      &hmr RCTRL DOWN  &hmr RSHFT UP  &hmr LALT RIGHT  &hmr RGUI LC(BACKSPACE)
-  &kp LC(Z)  &kp LC(X)  &kp LC(C)     &kp LC(V)     &kp LC(B)                                &kp LC(LEFT)  &none            &none          &kp LC(RIGHT)    &kp LC(FSLH)
-                                      &trans        &lt 3 ESCAPE   &lt 7 BACKSPACE    &none  &none         &none
+  &kp LC(Q)  &kp LC(W)  &kp LC(LBKT)  &kp LC(RBKT)   &kp LC(GRAVE)                               &kp HOME      &kp PG_DN  &kp PG_UP  &kp END        &kp INS
+  &kp LGUI   &kp LALT   &kp LSHFT     &kp LCTRL      &kp PRCNT                                   &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT      &kp LC(BACKSPACE)
+  &kp LC(Z)  &kp LC(X)  &kp LC(C)     &kp LC(V)      &kp LC(B)                                   &kp LC(LEFT)  &none      &none      &kp LC(RIGHT)  &kp LC(FSLH)
+                                      &mt LCTRL DEL  &mt LSHFT ESCAPE  &lt 7 BACKSPACE    &none  &none         &none
             >;
         };
 
         fn {
             bindings = <
-  &kp F1    &kp F2    &kp F3     &kp F4     &kp F5                     &kp F6   &kp F7     &kp F8     &kp F9    &kp F10
-  &sk LGUI  &sk LALT  &sk LSHFT  &sk LCTRL  &kp F11                    &kp F12  &sk RCTRL  &sk RSHFT  &sk LALT  &sk RGUI
-  &trans    &trans    &trans     &trans     &trans                     &trans   &trans     &trans     &trans    &trans
-                                 &trans     &trans   &trans    &trans  &trans   &trans
+  &kp F1    &kp F2    &kp F3     &kp F4     &kp F5                   &kp F6   &kp F7     &kp F8     &kp F9    &kp F10
+  &sk LGUI  &sk LALT  &sk LSHFT  &sk LCTRL  &kp F11                  &kp F12  &sk RCTRL  &sk RSHFT  &sk LALT  &sk RGUI
+  &none     &none     &none      &none      &none                    &none    &none      &none      &none     &none
+                                 &none      &none    &none    &none  &none    &none
             >;
         };
 
@@ -198,19 +183,19 @@
 
         adj {
             bindings = <
-  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans  &kp C_BRI_DN  &kp C_BRI_UP  &trans      &kp PRINTSCREEN
-  &bt BT_CLR    &out OUT_BLE  &out OUT_USB  &trans        &trans                          &trans  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &kp LS(PRINTSCREEN)
-  &trans        &trans        &trans        &trans        &trans                          &trans  &kp C_PREV    &kp C_NEXT    &kp C_PP    &kp LA(PRINTSCREEN)
-                                            &trans        &trans        &trans    &trans  &trans  &trans
+  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &none  &kp C_BRI_DN  &kp C_BRI_UP  &none       &kp PRINTSCREEN
+  &bt BT_CLR    &out OUT_BLE  &out OUT_USB  &none         &none                         &none  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &kp LA(PRINTSCREEN)
+  &none         &none         &none         &none         &none                         &none  &kp C_PREV    &kp C_NEXT    &kp C_PP    &kp LS(PRINTSCREEN)
+                                            &none         &none         &none    &none  &none  &none
             >;
         };
 
         mouse {
             bindings = <
-  &kp Z   &trans    &trans    &trans    &trans                    &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans
-  &trans  &mkp MB3  &mkp MB2  &mkp MB1  &trans                    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &trans
-  &trans  &trans    &trans    &trans    &trans                    &trans          &trans          &trans          &trans           &trans
-                              &trans    &trans  &trans    &trans  &trans          &trans
+  &none  &none     &none     &none     &none                  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
+  &none  &mkp MB3  &mkp MB2  &mkp MB1  &none                  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
+  &none  &none     &none     &none     &none                  &none           &none           &none         &none            &none
+                             &none     &none  &none    &none  &none           &none
             >;
         };
     };
