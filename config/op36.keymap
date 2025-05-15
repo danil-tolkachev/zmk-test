@@ -70,13 +70,13 @@
         };
 
         en {
-            bindings = <&layer_ru>;
+            bindings = <&layer_en>;
             key-positions = <2 12>;
             layers = <0 1>;
         };
 
         ru {
-            bindings = <&layer_en>;
+            bindings = <&layer_ru>;
             key-positions = <3 13>;
             layers = <0 1>;
         };
@@ -84,6 +84,7 @@
         num {
             bindings = <&mo 6>;
             key-positions = <31 32>;
+            layers = <0 1>;
         };
     };
 
@@ -169,7 +170,7 @@
             bindings = <
   &kp GRAVE  &kp AT_SIGN  &kp HASH    &kp DLLR      &kp PRCNT                        &kp LBRC      &kp LBKT   &kp RBKT       &kp RBRC      &kp RU_DQT
   &kp PLUS   &kp MINUS    &kp RU_DOT  &kp RU_COMMA  &kp EQUAL                        &kp EXCL      &kp LPAR   &kp RPAR       &kp RU_COLON  &kp RU_SEMI
-  &kp TILDE  &kp STAR     &kp PIPE    &kp AMPS      &kp BSLH                         &kp RU_QMARK  &kp CARET  &kp LESS_THAN  &kp GT        &kp FSLH
+  &kp TILDE  &kp STAR     &kp PIPE    &kp AMPS      &kp BSLH                         &kp RU_QMARK  &kp CARET  &kp LESS_THAN  &kp GT        &kp RU_FSLH
                                       &none         &mo 6      &none    &lt 7 ENTER  &lt 6 SPACE   &kp UNDER
             >;
         };
