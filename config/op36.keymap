@@ -117,18 +117,16 @@
             label = "LAYER_RU";
         };
 
-        ru_hash: ru_hash {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&en &kp HASH &ru>;
-            label = "#";
-        };
+        en_sym: en_sym {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&en &macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_wait_time 10>,
+                <&ru>,
+                <&macro_wait_time 10>;
 
-        ru_dllr: ru_dllr {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&en &kp DLLR &ru>;
-            label = "$";
+            label = "EN_SYM";
         };
     };
 
@@ -182,10 +180,10 @@
 
         sym_ru {
             bindings = <
-  &kp GRAVE  &kp AT_SIGN  &ru_hash    &ru_dllr      &kp PRCNT                        &kp LBRC      &kp LBKT   &kp RBKT       &kp RBRC      &kp RU_DQT
-  &kp PLUS   &kp MINUS    &kp RU_DOT  &kp RU_COMMA  &kp EQUAL                        &kp EXCL      &kp LPAR   &kp RPAR       &kp RU_COLON  &kp RU_SEMI
-  &kp TILDE  &kp STAR     &kp PIPE    &kp AMPS      &kp BSLH                         &kp RU_QMARK  &kp CARET  &kp LESS_THAN  &kp GT        &kp RU_FSLH
-                                      &none         &mo 6      &none    &lt 7 ENTER  &lt 6 SPACE   &kp UNDER
+  &en_sym GRAVE  &en_sym AT_SIGN  &en_sym HASH  &en_sym DLLR  &kp PRCNT                        &en_sym LBRC  &en_sym LBKT   &en_sym RBKT       &en_sym RBRC  &kp RU_DQT
+  &kp PLUS       &kp MINUS        &kp RU_DOT    &kp RU_COMMA  &kp EQUAL                        &kp EXCL      &kp LPAR       &kp RPAR           &kp RU_COLON  &kp RU_SEMI
+  &en_sym TILDE  &kp STAR         &kp PIPE      &en_sym AMPS  &kp BSLH                         &kp RU_QMARK  &en_sym CARET  &en_sym LESS_THAN  &en_sym GT    &kp RU_FSLH
+                                                &none         &mo 6      &none    &lt 7 ENTER  &lt 6 SPACE   &kp UNDER
             >;
         };
 
