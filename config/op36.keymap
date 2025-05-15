@@ -198,9 +198,9 @@
 
         adj {
             bindings = <
-  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans  &kp C_BRI_DN  &kp C_BRI_UP  &trans      &trans
-  &bt BT_CLR    &out OUT_BLE  &out OUT_USB  &trans        &trans                          &trans  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &trans
-  &trans        &trans        &trans        &trans        &trans                          &trans  &kp C_PREV    &kp C_NEXT    &kp C_PP    &trans
+  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans  &kp C_BRI_DN  &kp C_BRI_UP  &trans      &kp PRINTSCREEN
+  &bt BT_CLR    &out OUT_BLE  &out OUT_USB  &trans        &trans                          &trans  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &kp LS(PRINTSCREEN)
+  &trans        &trans        &trans        &trans        &trans                          &trans  &kp C_PREV    &kp C_NEXT    &kp C_PP    &kp LA(PRINTSCREEN)
                                             &trans        &trans        &trans    &trans  &trans  &trans
             >;
         };
