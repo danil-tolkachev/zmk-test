@@ -212,5 +212,15 @@
             if-layers = <1 6>;
             then-layer = <5>;
         };
+
+        symen {
+            if-layers = <0 4>;
+            then-layer = <4>;
+        };
+
+        symru {
+            if-layers = <1 5>;
+            then-layer = <5>;
+        };
     };
 };
