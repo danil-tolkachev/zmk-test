@@ -65,12 +65,6 @@
             key-positions = <3 13>;
             layers = <0 1>;
         };
-
-        num {
-            bindings = <&mo 6>;
-            key-positions = <31 32>;
-            layers = <0 1>;
-        };
     };
 
     macros {
@@ -200,27 +194,5 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        en_num {
-            if-layers = <0 6>;
-            then-layer = <4>;
-        };
-
-        ru_num {
-            if-layers = <1 6>;
-            then-layer = <5>;
-        };
-
-        symen {
-            if-layers = <0 4>;
-            then-layer = <4>;
-        };
-
-        symru {
-            if-layers = <1 5>;
-            then-layer = <5>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
