@@ -208,7 +208,7 @@
             then-layer = <4>;
         };
 
-        num_ru {
+        ru_num {
             if-layers = <1 6>;
             then-layer = <5>;
         };
